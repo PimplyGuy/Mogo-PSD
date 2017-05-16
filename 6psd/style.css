@@ -183,23 +183,72 @@ h2.title {
     color: #999999;
     letter-spacing: 1px;
 }
-
+/*Hover gradient*/
 .story-wrap {
     margin-top: 100px;
 }
-.story-wrap .item {
+.story-wrap .single {
     float: left;
+    transition: all 0.4s ease-out;
 }
-
-.story-wrap img {
+.single {
     margin-right: 25px;
+    position: relative;
     width: 300px;
     height: 200px;
 }
-.story-wrap img:last-child {
+.story-wrap .single:last-child {
     margin-right: 0;
 }
+.single:hover .all-overlay, .images img:hover{
+    opacity: 1;
+}
+.man:hover .all-overlay {
+    opacity: 1;
+}
 
+.man {
+    position: relative;
+    width: 280px;
+    height: 346px;
+    transition: .8s ease;
+}
+
+.single:hover, .man:hover{
+    box-shadow: 10px 10px 0 0 #3bd3ba;
+}
+
+
+.all-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.8s;
+    background: linear-gradient(to bottom, rgba(219, 116, 117, 0.6) 0%, rgba(220, 132, 118, 0.75) 24%, rgba(224, 150, 121, 0.75) 42%, rgba(222, 151, 119, 0.75) 42%, rgba(221, 155, 120, 0.75) 45%, rgba(225, 167, 121, 0.75) 55%, rgba(222, 168, 121, 0.75) 57%, rgba(225, 171, 124, 0.75) 61%, rgba(224, 173, 120, 0.75) 62%, rgba(225, 180, 125, 0.75) 68%, rgba(226, 181, 122, 0.75) 70%, rgba(224, 189, 125, 0.75) 77%, rgba(227, 189, 124, 0.75) 79%, rgba(225, 195, 123, 0.75) 84%, rgba(228, 205, 125, 0.75) 100%);
+}
+
+.all-overlay span {
+    position: relative;
+    top: 78px;
+}
+.all-overlay span i {
+    font-size: 29px;
+}
+
+.all-overlay a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: -1px;
+    font:18px 'Montserrat',sans-serif;
+}
+.all-overlay a:hover {
+    color: #fce38a;
+}
+/*Hover gradient*/
 
 .blue {
     color: #fff;
@@ -210,6 +259,8 @@ h2.title {
 .blue-item {
     float: left;
     width: 20%;
+    user-select: none;
+    cursor: default;
     padding: 77px 20px;
     border-right: 1px solid #fff;
 }
@@ -301,18 +352,18 @@ h2.title {
     margin-top: 90px;
 }
 
-.first, .second, .third {
+.first,.second,.third{
     float: right;
     width: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-family: 'Montserrat,sans-serif';
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #e5e5e5;
 }
-.first { background: url(images/firstBg.png) no-repeat 10px center;}
-.second { background: url(images/secondBg.png) no-repeat 10px center;}
-.third { background: url(images/third.png) no-repeat 10px center;}
+.first { background: url(images/firstBg.png) no-repeat 15px 13px;}
+.second { background: url(images/secondBg.png) no-repeat 15px 13px;}
+.third { background: url(images/third.png) no-repeat 15px 13px;}
 
 .icon {
     background: url(images/ARROW-_-DOWN.png) no-repeat center 7px;
@@ -330,28 +381,31 @@ h2.title {
 
 #jon { background: #f8f8f8;width: 100%;}
 
+#polosa {
+    position: relative;
+    background: #ccc;
+    width: 1800px;
+}
 .jon-wrap {
+    position: relative;
+    width: 900px;
     padding: 65px 20px;
-    background: url(images/Jonbg.png) no-repeat 100px 60px;
+    background: url(images/Jonbg.png) no-repeat 80px 60px;
 }
 
 .txt {
-    width: 70%;
-    margin-left: 255px;
+    padding-left: 265px;
     margin-top: 10px;
     font: 22px 'Roboto', sans-serif;
     font-style: italic;
     color: #999999;
     line-height: 34px;
 }
-.txt a{
-    position: absolute;
-    top: 50%;
-    width: 50px;
-    height: 35px;
+.txt:nth-child(2){
+    background: url(images/Joshua.png) no-repeat 45px center;  
 }
-.txt a:hover {
-    border: 1px solid #ccc;
+.txt:nth-child(3){
+    background: url(images/Thor.png) no-repeat 45px center;  
 }
 
 .txt span {
@@ -363,14 +417,12 @@ h2.title {
     display: inline-block;
 }
 .la {
-    left: 0;
-    text-decoration: none;
+  
     background: url(images/arLeft.png) no-repeat center;
 }
 
 .ra {
-    right: 0;
-    text-decoration: none;
+
     background: url(images/arRight.png) no-repeat center;
 }
 
@@ -395,6 +447,23 @@ h2.title {
     width: 33.3%;
 }
 
+.man span {
+    top: 48%;
+}
+.man span a {
+    padding: 17px 18px 10px 15px;
+    background-color: #fce38a;
+    margin-right: -3px;
+    color: #f38181;
+    transition: all .6s;
+}
+.man span a:hover {
+    color: #fff;
+    background-color: #f38181;
+}
+.fa-twitter {
+    margin: 0 -2px;
+}
 #branding {
     background-color: #f8f8f8;
 }
@@ -423,16 +492,12 @@ h2.title {
 .soc.soc-inst{background-position: -78px 0;}
     .soc.soc-inst:hover{background-position: -78px -26px; background-color: #f38181;}
 
-
-#work img {
-    margin-top: -45px;
-    width: 100%;
-    height: 582px;
-}
 #jon2{
     background-color: #fff;
-    padding: 100px;
 }
+
+
+
 
 .jon-wrap.jon-wrap2 {background: url(images/Joshua.png) no-repeat 55px center;}
 
@@ -540,16 +605,14 @@ h2.title {
 }
 
 #map {
+    position: relative;
     text-align: center;
-    width: 100%;
     height: 205px;
-    background: url(images/Map.jpg) no-repeat center 0;
-    -webkit-background-size: cover;
-    background-size: cover;
+    background: url(images/Map.jpg);
 }
 .content-wrap {
     position: relative;
-    top: 60px;
+    bottom: 153px;
 }
 
 .geo {
@@ -693,4 +756,185 @@ h2.title {
 }
 .copyright span {
     color: #f38181;
+}
+
+.slideshow-container {
+    min-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    background-color: #ccc;
+    margin-top: -22px;
+    padding: 16px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.dot{
+    cursor: pointer;
+    background-color: #f38181;
+    display: inline-block;
+}
+.active, dot:hover{
+    background-color: #717171;   
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; 
+}
+
+@-webkit-keyframes fade {
+   from { opacity: .4 }
+    to { opacity: 1 }
+}
+@-o-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+@-moz-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+}
+@keyframes fade {
+   from { opacity: .4 }
+    to { opacity: 1 }
+}
+
+
+/* скрываем чекбоксы и блоки с содержанием */
+.hide, .hide + label ~ div {
+    display: none; 
+}
+/* вид текста label */
+.hide + label,
+.hide:checked + label {
+    cursor: pointer;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: block;
+    height: 94px;
+    width: 100%;
+    margin-top: 47px;
+    border-top: 1px solid #ccc;
+    text-align: left;
+    font: italic 15px 'Roboto',sans-serif;
+    text-transform: none;
+    line-height: 24px;
+    overflow: auto;
+    color: #999999;
+}
+.overlay {
+    height: 205px;
+    background-color: rgba(255,255,255,.8);
+}
+
+/*Accordion block styles*/
+.accordion a {
+    text-decoration: none;
+    text-align: left;
+    font: 15px 'Montserrat',sans-serif;
+    color: inherit;
+}
+.accordion {
+    list-style: none;
+    padding: 0;
+}
+
+    .accordion li {
+        margin-bottom: 19px;
+          width: 460px;
+        float: right;
+        
+        }
+.accordion li:last-child{
+    margin-bottom: 0;
+}
+
+
+ a.toggle {
+            position: relative;
+            display: block;
+            color: #333;
+            text-transform: uppercase;
+            padding: 15px;
+            padding-left: 60px;
+            border: 1px solid #e5e5e5;
+            transition: background .3s ease;
+}
+.toggle a:hover {
+                background: rgba(0, 0, 0, 0.9);
+}
+.accordion ul li a:focus {
+         -moz-transform: rotate(180deg);
+         -o-transform: rotate(180deg);
+         -webkit-transform: rotate(180deg);
+         transform: rotate(180deg);
+}
+
+.accordion li:first-child a {
+    background: url(images/firstBg.png) no-repeat 15px 9px;
+}
+.accordion li:nth-child(2) a {
+    background: url(images/secondBg.png) no-repeat 15px 9px;
+}
+.accordion li:last-child a {
+    background: url(images/third.png) no-repeat 15px 9px;
+}
+
+.inner {
+        font: italic 13px 'Roboto Condenced',sans-serif;
+        overflow: auto;
+        height: 127px;
+        display: none;
+        border: 1px  solid #e5e5e5;
+        border-top: none;
+        text-align: left;
+}
+.inner li {
+    padding: 20px 20px 0 20px;
+    line-height: 24px;
+    color: #999999;
+    
+}
+
+.fa-chevron-down{
+    float: right;
+    color: #cccccc;
+    font-size: 20px;
+    font-weight: 300;
+}
+.images {width: 1360px;position: relative;}
+
+.coco{
+    margin-right: -5px;
+    float: left;
+    width: 50%;
+}
+.coco img {
+    margin: -2px ;
+}
+.images img {
+    margin: -2px;
+    background-blend-mode: #fff;
 }

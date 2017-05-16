@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mogo</title>
+     
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Montserrat');
@@ -10,8 +11,21 @@
     </style>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+      <link rel="stylesheet" href="slick/slick.css">
+      <link rel="stylesheet" href="slick/slick-theme.css">
+      <link rel="stylesheet" href="style.css">
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 </head>
 <body>
+   <script>
+        $(document).ready(
+
+          function() { 
+            $(".inner").niceScroll({cursorwidth: '5px',cursorcolor: '#95e1d3', background: '#ededed',cursorborder: 'none',cursorborderradius: '5px',cursorfixedheight: '75'});
+          }
+
+        );
+    </script>
     <div id="header">
        <div class="container">
             <span class="logo"><a href="#">MoGo</a></span>
@@ -29,28 +43,44 @@
         </div>
     </div>
     <div id="home">
-        <div class="container">
-            <h2>creative template</h2>
-            <h1>welcome to mogo</h1>
-            <div class="line"></div>
-            <a href="#">learn more</a>
+       <div class="slidershow-container container">
+            <div class="mySlides fade">
+                <h2>creative template</h2>
+                <h1>welcome to mogo</h1>
+                <div class="line"></div>
+                <a href="#">learn more</a>
+            </div>
+            <div class="mySlides fade">
+                <h2>creative template</h2>
+                <h1>welcome to mogo</h1>
+                <div class="line"></div>
+                <a href="#">learn more</a>
+            </div>
+            <div class="mySlides fade">
+                <h2>creative template</h2>
+                <h1>welcome to mogo</h1>
+                <div class="line"></div>
+                <a href="#">learn more</a>
+            </div>
+            
+            
         </div>
         <div class="container">
             <div class="car clearfix">
                 <div class="item">
-                    <div class="long-line"></div>
+                    <div class="long-line dot" onclick="currentSlide(1)"></div>
                     <p><span>01</span>intro</p>
                 </div>
                 <div class="item">
-                    <div class="long-line"></div>
+                    <div class="long-line dot" onclick="currentSlide(2)"></div>
                     <p><span>02</span>work</p>
                 </div>
                 <div class="item">
-                    <div class="long-line"></div>
+                    <div class="long-line dot" onclick="currentSlide(3)"></div>
                     <p><span>03</span>about</p>
                 </div>
                 <div class="item">
-                    <div class="long-line"></div>
+                    <div class="long-line dot" onclick="currentSlide(4)"></div>
                     <p><span>04</span>contacts</p>
                 </div>
             </div>
@@ -63,9 +93,22 @@
             <div class="line"></div>
             <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <div class="story-wrap clearfix">
-                <img src="images/item1.png" alt="1">
-                <img src="images/item2.jpg" alt="2">
-                <img src="images/item3.jpg" alt="3">
+               <div class="single">
+                    <img src="images/item1.jpg" width="300" height="200" alt="1">
+                    <div class="all-overlay">
+                        <span><a href="#"><i class="fa fa-users" aria-hidden="true"></i><br>super team</a></span>
+                    </div>
+                </div>
+                <div class="single">
+                    <img src="images/item2.jpg" width="300" height="200" alt="1">
+                    <div class="all-overlay">
+                        <span><a href="#"><i class="fa fa-users" aria-hidden="true"></i><br>super team</a></span>                 </div>
+                </div>
+                <div class="single">
+                    <img src="images/item3.jpg" width="300" height="200" alt="1">
+                    <div class="all-overlay">
+                        <span><a href="#"><i class="fa fa-users" aria-hidden="true"></i><br>super team</a></span>                 </div>
+                </div>
             </div>
         </div>
         <div class="blue">
@@ -156,25 +199,51 @@
                      <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                      <div class="what-wrap clearfix">
                          <img src="images/designBg.jpg" class="left" alt="#">
-                         <div class="first"><a href="#" class="icon"></a></div>
-                         <div class="second"><a href="#" class="icon"></a></div>
-                         <div class="third"><a href="#" class="icon"></a></div>
-                     </div>
-            </div>
-        </div>  
+                           
+                        <ul class="accordion">
+                              <li>
+                                <a class="toggle" href="javascript:void(0);">photography <i class="fa fa-chevron-down" tabindex="0"></i></a>
+                                <ul class="inner">
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </li>
+                                </ul>
+                              </li>
+
+                              <li>
+                                <a class="toggle" href="javascript:void(0);">creativity<i class="fa fa-chevron-down" tabindex="0"></i></a>
+                                <ul class="inner">
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </li>
+                                </ul>
+                              </li>
+
+                              <li>
+                                <a class="toggle" href="javascript:void(0);">web design<i class="fa fa-chevron-down" tabindex="0"></i></a>
+                                <ul class="inner">
+                                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla </li>
+                                </ul>
+                              </li>
+                         </ul>    
+                    </div>
+              </div>   
+        </div>                   
+                      
         
         <div id="jon">
-            <div class="container">
-                <div class="jon-wrap">
-                   <div class="txt">
-                        <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                        <a href="#" class="la"></a>
-                        <a href="#" class="ra"></a>
-                        <div class="line"></div><span>Jon Doe</span>
-                    </div>    
-                </div>
-            </div>
-        </div>         
+                   <div class="slider1 container">
+                                       <div class="txt jon-wrap" style="width: 100%">
+                                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                                    <div class="line"></div><span>Jon Doe</span>
+                                           </div>
+                                           <div class="txt jon-wrap" style="width: 100%">
+                                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                                    <div class="line"></div><span>Jon Doe</span>
+                                           </div>
+                                       <div class="txt jon-wrap" style="width: 100%">
+                                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                                    <div class="line"></div><span>Jon Doe</span>
+                                           </div>
+
+                    </div>
+                </div>     
         
         <div id="team">
             <div class="container box">
@@ -184,25 +253,43 @@
                     <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     <div class="team-wrap clearfix">
                        <div class="titem titem1">
-                            <img src="images/teamItem1.jpg" width="280" alt="">
-                            <h4>matthew dix</h4>
-                            <p>graphic design</p>
-                                <div class="social-mat">
-                                    <a href="#" class="soc soc-fb"></a>
-                                    <a href="#" class="soc soc-tw"></a>
-                                    <a href="#" class="soc soc-db"></a>
-                                    <a href="#" class="soc soc-inst"></a>
-                                </div>    
+                           <div class="man">
+                                <img src="images/teamItem1.jpg" width="280" alt="">
+                                <div class="all-overlay">
+                                    <span><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                                </div>
+                                <h4>matthew dix</h4>
+                                <p>graphic design</p>
+                            </div>
                         </div>  
                         <div class="titem">
-                            <img src="images/teamItem2.jpg" width="280" alt="">
-                            <h4>christopher campbell</h4>
-                            <p>branding/UX design</p>
+                          <div class="man">
+                               <img src="images/teamItem2.jpg" width="280" alt="">
+                                <div class="all-overlay">
+                                   <span><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                                </div>
+                                <h4>christopher campbell</h4>
+                                <p>branding/UX design</p>
+                            </div>
                         </div>   
-                        <div class="titem">
-                            <img src="images/teamItem3.jpg" width="280" alt="">
-                            <h4>michael fertig</h4>
-                            <p>developer</p>
+                        <div  class="titem">
+                           <div class="man">
+                                <img src="images/teamItem3.jpg" width="280" alt="">
+                                <div class="all-overlay">
+                                   <span><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></span>
+                                    <span><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></span>
+                                </div>
+                                <h4>michael fertig</h4>
+                                <p>developer</p>
+                            </div>
                         </div>     
                     </div>
             </div>
@@ -215,28 +302,44 @@
           </div>  
           
            <div id="work">
-                <div class="container box">
+                <div class="container box clearfix width="480" height="390"">
                         <h3 class="title">what we do</h3>
                         <h2 class="title">some our work</h2>
                         <div class="line"></div>
                          <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
-                <img src="images/workBg.jpg" alt="">
             </div>
+            <div class="images clearfix">
+                        <div class="coco clearfix">
+                             <img src="images/work.jpg" width="340" height="250">
+                             <img src="images/work2.jpg" width="340" height="250">
+                             <img src="images/work3.jpg" width="340" height="250">
+                             <img src="images/work4.jpg" width="340" height="250">
+                        </div>
+                       
+                             <img src="images/work5.jpg" class="left" width="340" height="499">
+                             <img src="images/work6.jpg" width="340" height="250">
+                             <img src="images/work7.jpg" width="340" height="250">
+                </div>
             
              <div id="jon2">
-                <div class="container">
-                    <div class="jon-wrap jon-wrap2">
-                       <div class="txt">
-                            <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
-                            <a href="#" class="la"></a>
-                            <a href="#" class="ra"></a>
-                            <div class="line"></div><span>Joshua Earle</span>
-                        </div>    
+                <div class="slider2 container">
+                                       <div class="txt jon-wrap" style="width: 100%">
+                                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                                    <div class="line"></div><span>Jon Doe</span>
+                                           </div>
+                                           <div class="txt jon-wrap" style="width: 100%">
+                                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                                    <div class="line"></div><span>Jon Doe</span>
+                                           </div>
+                                       <div class="txt jon-wrap" style="width: 100%">
+                                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.”</p>
+                                                    <div class="line"></div><span>Jon Doe</span>
+                                           </div>
+
                     </div>
                 </div>
-             </div>    
-             
+                
              <div id="people">
                 <div class="container box">
                         <h3 class="title">happy clients</h3>
@@ -306,6 +409,7 @@
               </div> 
               
               <div id="map">
+                <div class="overlay"></div>
                  <div class="container">
                      <div class="content-wrap">
                           <div class="geo"></div>
@@ -369,6 +473,30 @@
                       </div>
                   </div>
               </div>
-    
+      <script src="js/script.js"></script>
+      <script src="http://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
+      <script src="slick/slick.min.js"></script>
+      <script src="js/js.js"></script>
+      <script src="js/jquery.nicescroll.min.js"></script>
+      
+      <script src="js/common.js"></script>
+      
+      <script>
+        $('.toggle').click(function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+
+            if ($this.next().hasClass('show')) {
+                $this.next().removeClass('show');
+                $this.next().slideUp(350);
+            } else {
+                $this.parent().parent().find('li .inner').removeClass('show');
+                $this.parent().parent().find('li .inner').slideUp(350);
+                $this.next().toggleClass('show');
+                $this.next().slideToggle(350);
+            }
+        });
+      </script>
 </body>
 </html>
